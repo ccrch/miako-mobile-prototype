@@ -14,8 +14,8 @@
     </style>
     <title>{{ data.Title }} − miako</title>
     {{ data.Head|raw }}
-    <link href="/assets/styles.min.css?v={{ 'now'|date('YmdHi') }}" rel="stylesheet" />
-    <script src="/assets/scripts.min.js?v={{ 'now'|date('YmdHi') }}" type="text/javascript" defer></script>
+    <link href="assets/styles.min.css?v={{ 'now'|date('YmdHi') }}" rel="stylesheet" />
+    <script src="assets/scripts.min.js?v={{ 'now'|date('YmdHi') }}" type="text/javascript" defer></script>
   </head>
   <body class="{{ data.BodyClass }}">
     {% block Content %}{% endblock %}
