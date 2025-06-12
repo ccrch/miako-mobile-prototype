@@ -1,0 +1,11 @@
+
+body {
+  background: #eee;
+  color: #111;
+  font-size: 2.1em;
+
+  svg {
+    transform: translateX(-7em) scaleX(-1);
+    width: 12em;
+  }
+}

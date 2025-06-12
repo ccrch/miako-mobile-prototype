@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "module": "CommonJS",
+    "lib": [
+      "es5",
+      "es2015.promise",
+      "es6",
+      "es7",
+      "es2021",
+      "dom",
+    ],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": true,
+    "preserveSymlinks": false,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "outDir": "./build",
+    "rootDir": "./",
+    "paths": {
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "components/*": [
+        "src/scripts/components/*"
+      ],
+      "tslib": [
+        "node_modules/tslib/tslib.d.ts"
+      ],
+      "twigs/*": [
+        "src/twigs/*"
+      ],
+    },
+  },
+  "typedocOptions": {
+    "out": "docs/scripts",
+    "excludeNotDocumented": true,
+    "exclude": "**/node_modules/**",
+    "cleanOutputDir": true,
+    "githubPages": false,
+    "name": "Vettvangur",
+    "preserveWatchOutput": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "webpack",
+    "src/libs"
+  ],
+  "typeRoots": [
+    "node_modules/@types"
+  ]
+}

@@ -1,0 +1,54 @@
+
+{%- macro Id(string) -%}
+
+  {# {{- string | lower | replace({' ': '-', 'á': 'a', 'ð': 'd', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u', 'ý': 'y', 'þ': 'th', 'æ': 'ae', 'ö': 'o'}) -}} #}
+  {{- string | lower -}}
+
+{%- endmacro -%}
+
+
+{%- macro RandomText(length) -%}
+
+  {%- from _self import lipsum -%}
+  {%- if not length -%}
+    {%- set length = random(2) + 1 -%}
+  {%- endif -%}
+
+  {{- lipsum(length) | replace({',': '', ';': ''}) | capitalize -}}
+
+{%- endmacro -%}
+
+
+{%- macro RandomTextContent(length) -%}
+
+  {%- from _self import lipsum -%}
+  {%- if not length -%}
+    {%- set length = random(36) + 1 -%}
+  {%- endif -%}
+
+  {{- lipsum(length) | capitalize -}}.
+
+{%- endmacro -%}
+
+
+{%- macro RandomTextLowercase(length) -%}
+
+  {%- from _self import randomTxt -%}
+  {{- randomTxt(length) | lower -}}
+
+{%- endmacro -%}
+
+
+{%- macro lipsum(length) -%}
+
+  {%- set lipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec nibh risus. Ut tellus turpis, fringilla a libero at, ultricies porttitor eros. Duis ultricies lacinia diam, eget pharetra leo tincidunt vitae. Mauris ullamcorper feugiat dolor id bibendum. Donec ultricies vel tortor id ultricies. In sed placerat tortor. Etiam faucibus fringilla massa, sed commodo sapien tempus ac. Sed sapien orci, tincidunt in tristique ut, maximus lacinia orci. Vivamus non mi convallis, vulputate orci et, hendrerit magna. Aliquam eu eros viverra, gravida elit et, dignissim elit. In imperdiet efficitur odio quis ullamcorper. Nam fermentum, nulla eu placerat tempus, dolor sapien imperdiet mauris, ac pharetra dui ipsum eget risus. Nunc tempor orci a sagittis tempor. Nunc quis ultricies turpis. Praesent a laoreet mi. Sed enim quam, lacinia eu laoreet sit amet, posuere vitae libero. Phasellus tortor lorem, scelerisque vitae condimentum ac, tempor hendrerit justo. Nullam tincidunt ex id dui cursus, in interdum quam tempus. Donec a risus nibh. Aliquam rutrum volutpat mollis. Fusce diam nisl, consequat vel mi eget, venenatis blandit velit. Etiam sodales arcu ac pellentesque pellentesque. Maecenas placerat tempor dui, mattis ultricies elit maximus eu. Ut id neque in nibh egestas sagittis. Suspendisse consequat accumsan nisl, a consectetur nisi volutpat ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut purus massa, dapibus ac feugiat in, consequat sit amet metus. Fusce eget varius sem. Donec viverra metus vel neque sodales, in pellentesque nisl feugiat. In ullamcorper ex et quam posuere, vitae ultrices libero scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce blandit justo in sapien tristique, sed suscipit mauris vestibulum. Etiam elementum urna lobortis erat pretium, ac volutpat neque posuere. Fusce molestie mattis orci non pretium. Praesent vel purus nibh. Sed et mi ut libero cursus pellentesque quis vitae felis. Mauris in eros faucibus, porta mi non, scelerisque dui. Maecenas sit amet velit eget lectus interdum pulvinar. Mauris elementum ipsum vitae quam feugiat, at imperdiet nibh auctor. Aenean non purus quis velit rhoncus eleifend vitae ac elit.' | split(' ') -%}
+
+  {%- set words -%}
+    {%- for i in range(1, length) -%}
+      {{- random(lipsum) | replace({'.': ''}) -}} %space%
+    {%- endfor -%}
+  {%- endset -%}
+
+  {{- words | replace({'%space%': ' '}) | trim -}}
+
+{%- endmacro -%}

@@ -1,0 +1,13 @@
+
+{% set data = {
+  "Title": "Hi!",
+} %}
+
+{% extends "extends/template.twig" %}
+
+{% block Content %}
+
+  <div>Hi</div>
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}
