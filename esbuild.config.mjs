@@ -35,19 +35,19 @@ const clearBuildFolder = () => {
 
 // Current date added to css/js file names
 
-const currentDate = () => {
-  const now = new Date()
+// const currentDate = () => {
+//   const now = new Date()
 
-  const year = now.getFullYear().toString()
-  const month = String(now.getMonth() + 1).padStart(2, '0')
-  const day = String(now.getDate()).padStart(2, '0')
+//   const year = now.getFullYear().toString()
+//   const month = String(now.getMonth() + 1).padStart(2, '0')
+//   const day = String(now.getDate()).padStart(2, '0')
 
-  const hours = String(now.getHours()).padStart(2, '0')
-  const minutes = String(now.getMinutes()).padStart(2, '0')
-  // const seconds = String(now.getSeconds()).padStart(2, '0')
+//   const hours = String(now.getHours()).padStart(2, '0')
+//   const minutes = String(now.getMinutes()).padStart(2, '0')
+//   // const seconds = String(now.getSeconds()).padStart(2, '0')
 
-  return year + month + day + hours + minutes
-}
+//   return year + month + day + hours + minutes
+// }
 
 // Twig plugin
 
@@ -113,7 +113,8 @@ const options = {
       { out: 'scripts', in: 'src/scripts/scripts.ts' },
       { out: 'styles', in: 'src/styles/styles.scss' },
     ],
-    outExtension: { '.js': `.min.${currentDate()}.js`, '.css': `.min.${currentDate()}.css` },
+    // outExtension: { '.js': `.min.${currentDate()}.js`, '.css': `.min.${currentDate()}.css` },
+    outExtension: { '.js': '.min.js', '.css': '.min.css' },
     loader: {
       '.woff': 'file',
       '.woff2': 'file',
