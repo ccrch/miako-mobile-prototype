@@ -13,15 +13,15 @@
   }
 }
 
-@mixin headerBackground($page, $color) {
-  [data-page='#{$page}'] .header {
+@mixin headerBackground($color) {
+  [data-theme='#{$color}'] .header {
     background: var(--color-#{$color});
   }
 }
 
-@include headerBackground('home', 'purple');
-@include headerBackground('search', 'yellow');
-@include headerBackground('cart', 'orange-sun');
-@include headerBackground('favorites', 'pink');
-@include headerBackground('messages', 'blue-sky');
-@include headerBackground('profile', 'green');
+@include headerBackground('purple');
+@include headerBackground('yellow');
+@include headerBackground('orange-sun');
+@include headerBackground('pink');
+@include headerBackground('blue-sky');
+@include headerBackground('green');

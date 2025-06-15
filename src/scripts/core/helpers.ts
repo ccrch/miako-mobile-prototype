@@ -6,8 +6,6 @@ export const esbuildReload = () => {
   new EventSource('https://localhost:9000/esbuild').addEventListener('change', (e) => {
     const { added, removed, updated } = JSON.parse(e.data)
 
-    console.log('asdf')
-
     if (!added.length && !removed.length && updated.length === 1) {
       for (const link of document.getElementsByTagName('link') as any) {
         const url = new URL(link.href)

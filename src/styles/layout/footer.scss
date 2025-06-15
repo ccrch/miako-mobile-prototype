@@ -61,8 +61,8 @@
   }
 }
 
-@mixin activeFooterLink($page, $index, $color) {
-  [data-page='#{$page}'] .footer__link:nth-child(#{$index}) {
+@mixin activeFooterLink($color, $index) {
+  [data-theme='#{$color}'] .footer__link:nth-child(#{$index}) {
     color: var(--color-#{$color});
 
     &::before {
@@ -81,9 +81,9 @@
   }
 }
 
-@include activeFooterLink('home', 1, 'purple');
-@include activeFooterLink('search', 2, 'yellow');
-@include activeFooterLink('cart', 3, 'orange-sun');
-@include activeFooterLink('favorites', 4, 'pink');
-@include activeFooterLink('messages', 5, 'blue-sky');
-@include activeFooterLink('profile', 6, 'green');
+@include activeFooterLink('purple', 1);
+@include activeFooterLink('yellow', 2);
+@include activeFooterLink('orange-sun', 3);
+@include activeFooterLink('pink', 4);
+@include activeFooterLink('blue-sky', 5);
+@include activeFooterLink('green', 6);
