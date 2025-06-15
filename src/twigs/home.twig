@@ -1,0 +1,17 @@
+
+{% set data = {
+  pageId: 'home',
+  pageTitle: 'Hi!',
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Welcome, miako user!',
+  }) }}
+
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}

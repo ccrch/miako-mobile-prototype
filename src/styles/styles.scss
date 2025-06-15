@@ -1,2 +1,9 @@
 
-@import 'core/body.scss';
+@import 'core/base.scss';
+@import 'core/reset.scss';
+@import 'core/typography.scss';
+@import 'core/variables.scss';
+
+@import 'layout/app.scss';
+@import 'layout/footer.scss';
+@import 'layout/header.scss';

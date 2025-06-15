@@ -1,0 +1,39 @@
+
+{% macro Footer(props) %}
+
+  <footer class="footer">
+    <nav class="footer__navigation">
+      <a class="footer__link" href="../home">
+        {{ source('src/assets/icons/navigation/home.svg')|raw }}
+        {{ source('src/assets/icons/navigation/home-color.svg')|raw }}
+        Home
+      </a>
+      <a class="footer__link" href="../search">
+        {{ source('src/assets/icons/navigation/search.svg')|raw }}
+        {{ source('src/assets/icons/navigation/search-color.svg')|raw }}
+        Search
+      </a>
+      <a class="footer__link" href="../cart">
+        {{ source('src/assets/icons/navigation/cart.svg')|raw }}
+        {{ source('src/assets/icons/navigation/cart-color.svg')|raw }}
+        Cart
+      </a>
+      <a class="footer__link" href="../favorites">
+        {{ source('src/assets/icons/navigation/heart.svg')|raw }}
+        {{ source('src/assets/icons/navigation/heart-color.svg')|raw }}
+        Favorites
+      </a>
+      <a class="footer__link" href="../messages">
+        {{ source('src/assets/icons/navigation/message.svg')|raw }}
+        {{ source('src/assets/icons/navigation/message-color.svg')|raw }}
+        Messages
+      </a>
+      <a class="footer__link" href="../profile">
+        {{ source('src/assets/icons/navigation/profile.svg')|raw }}
+        {{ source('src/assets/icons/navigation/profile-color.svg')|raw }}
+        Profile
+      </a>
+    </nav>
+  </footer>
+
+{% endmacro %}

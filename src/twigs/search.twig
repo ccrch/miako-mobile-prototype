@@ -1,0 +1,17 @@
+
+{% set data = {
+  pageId: 'search',
+  pageTitle: 'Search',
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Search',
+  }) }}
+
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}

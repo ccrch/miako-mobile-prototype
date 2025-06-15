@@ -1,0 +1,17 @@
+
+{% set data = {
+  pageId: 'cart',
+  pageTitle: 'Cart',
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Cart',
+  }) }}
+
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}

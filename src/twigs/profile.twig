@@ -1,0 +1,17 @@
+
+{% set data = {
+  pageId: 'profile',
+  pageTitle: 'Profile',
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Profile',
+  }) }}
+
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}

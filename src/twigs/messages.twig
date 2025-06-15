@@ -1,0 +1,17 @@
+
+{% set data = {
+  pageId: 'messages',
+  pageTitle: 'Messages',
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Messages',
+  }) }}
+
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}

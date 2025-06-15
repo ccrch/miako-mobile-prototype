@@ -1,0 +1,17 @@
+
+{% set data = {
+  pageId: 'favorites',
+  pageTitle: 'Favorites',
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Favorites',
+  }) }}
+
+  {{ source('src/assets/images/unicorn.svg')|raw }}
+
+{% endblock %}

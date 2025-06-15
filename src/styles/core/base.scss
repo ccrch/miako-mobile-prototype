@@ -1,0 +1,30 @@
+
+html {
+  min-height: 100%;
+  background: var(--color-gray-background);
+  font-size: calc((100 / var(--design-width)) * 1vw);
+
+  @media (min-width: 1024px) {
+    font-size: calc(((100 / var(--design-width)) * var(--design-max-width) / 16) * 0.01rem);
+  }
+}
+
+body {
+  max-width: var(--container-max-width);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background: var(--color-white);
+  color: var(--color-gray-text-dark);
+  font-family: var(--font-default);
+  font-size: 11rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  text-size-adjust: none;
+
+  ::selection {
+    background: var(--color-gray-text-dark);
+    color: var(--color-white);
+  }
+}

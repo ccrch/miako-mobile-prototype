@@ -1,0 +1,88 @@
+
+.footer {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 2;
+  max-width: var(--container-max-width);
+  // height: 80rem;
+  height: 66rem;
+  background: var(--color-white);
+  border-top: 1rem solid var(--color-gray-border-dark);
+
+  &__navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  &__link {
+    flex: 0 0 16.6667%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 6rem;
+    position: relative;
+    z-index: 1;
+    width: 16.6667%;
+    height: 100%;
+    padding: 12rem 0;
+    color: var(--color-gray-text-dark);
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 11rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -2rem 0 auto;
+      height: 3rem;
+      background: transparent;
+      border-radius: 2rem;
+    }
+
+    svg {
+      width: 24rem;
+      height: 24rem;
+
+      &:first-of-type {
+        circle,
+        path {
+          stroke: var(--color-gray-text-dark);
+        }
+      }
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin activeFooterLink($page, $index, $color) {
+  [data-page='#{$page}'] .footer__link:nth-child(#{$index}) {
+    color: var(--color-#{$color});
+
+    &::before {
+      background: var(--color-#{$color});
+    }
+
+    svg {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        display: block;
+      }
+    }
+  }
+}
+
+@include activeFooterLink('home', 1, 'purple');
+@include activeFooterLink('search', 2, 'yellow');
+@include activeFooterLink('cart', 3, 'orange-sun');
+@include activeFooterLink('favorites', 4, 'pink');
+@include activeFooterLink('messages', 5, 'blue-sky');
+@include activeFooterLink('profile', 6, 'green');

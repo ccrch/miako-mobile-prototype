@@ -1,0 +1,33 @@
+
+{% from '../core/macros.twig' import Id, RandomText, RandomTextContent, RandomTextLowercase %}
+
+{% from '../layout/footer.twig' import Footer %}
+{% from '../layout/header.twig' import Header %}
+
+<!doctype html>
+<html class="preload" data-page="{{ data.pageId }}" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ccrch">
+    <meta name="description" content="Your stuff for good.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .preload { opacity: 0; }
+    </style>
+    <title>{{ data.pageTitle }} − miako</title>
+    <link href="{% if data.pageId != 'index' %}../{% endif %}assets/styles.min.css?v={{ 'now'|date('YmdHi') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="{% if data.pageId != 'index' %}../{% endif %}assets/scripts.min.js?v={{ 'now'|date('YmdHi') }}" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      {% block Content %}{% endblock %}
+      {{ Footer({
+        pageId: data.pageId,
+      }) }}
+    </div>
+  </body>
+</html>

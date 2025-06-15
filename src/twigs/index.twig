@@ -1,13 +1,13 @@
 
 {% set data = {
-  "Title": "Hi!",
+  pageId: 'index',
+  pageTitle: 'Hi!',
 } %}
 
-{% extends "extends/template.twig" %}
+{% extends 'core/template.twig' %}
 
 {% block Content %}
 
-  <div>Hi</div>
-  {{ source('src/assets/images/unicorn.svg')|raw }}
+  <a class="app__index" href="/home">Home</a>
 
 {% endblock %}
