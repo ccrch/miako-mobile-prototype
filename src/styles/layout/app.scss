@@ -11,6 +11,10 @@
   min-height: 123vh;
   overflow: hidden;
 
+  &:has(.app__index) {
+    min-height: 100vh;
+  }
+
   &__index {
     position: absolute;
     inset: 21rem 21rem auto auto;
@@ -19,13 +23,20 @@
     height: 21rem;
     font-size: 0;
 
+    ~ svg {
+      position: absolute;
+      inset: 50% auto auto;
+      transform: translate(-257rem, -50%) scaleX(-1) rotate(12deg);
+      width: 510rem;
+    }
+
     ~ .footer {
       display: none;
     }
   }
 
-  > svg {
-    transform: translate(-257rem, 50rem) scaleX(-1) rotate(12deg);
+  > .header + svg {
+    transform: translate(-257rem, 77rem) scaleX(-1) rotate(12deg);
     width: 510rem;
 
     * {
