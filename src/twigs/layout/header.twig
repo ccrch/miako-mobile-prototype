@@ -2,7 +2,24 @@
 {% macro Header(props) %}
 
   <header class="header">
-    <h1 class="h2">{{ props.headline }}</h1>
+    <h1 class="header__headline h2">{{ props.headline }}</h1>
+    {% if props.text %}
+      <h2 class="header__text">{{ props.text|raw }}</h2>
+    {% endif %}
+    {% if props.search %}
+      <form action="../search" class="header__search" method="post">
+        <div class="input">
+          <input name="search" placeholder="{{ props.searchPlaceholder }}" type="text">
+        </div>
+        <button class="button header__search-button" type="submit">
+          {{ source('src/assets/icons/navigation/search.svg')|raw }}
+          Search
+        </button>
+      </form>
+    {% endif %}
+    <div class="header__unicorn">
+      {{ source('src/assets/images/unicorn.svg')|raw }}
+    </div>
   </header>
 
 {% endmacro %}

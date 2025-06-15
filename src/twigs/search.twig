@@ -2,7 +2,7 @@
 {% set data = {
   pageId: 'search',
   pageTheme: 'yellow-lemon',
-  pageTitle: 'Search',
+  pageTitle: 'Search & buy!',
 } %}
 
 {% extends 'core/template.twig' %}
@@ -10,9 +10,13 @@
 {% block Content %}
 
   {{ Header({
-    headline: 'Search',
+    headline: 'Search & buy!',
+    search: true,
+    searchPlaceholder: 'Find something cool & get it',
   }) }}
 
-  {{ source('src/assets/images/unicorn.svg')|raw }}
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
 
 {% endblock %}

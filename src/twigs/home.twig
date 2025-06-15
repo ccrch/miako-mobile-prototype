@@ -10,9 +10,17 @@
 {% block Content %}
 
   {{ Header({
-    headline: 'Welcome, miako user!',
+    headline: 'Welcome, David!',
+    text: 'Want to set your stuff free — for good?',
   }) }}
 
-  {{ source('src/assets/images/unicorn.svg')|raw }}
+  {# text: 'Want to give your stuff a happy new home — for good?',
+  text: 'Want your stuff to live happily ever after — for good?',
+  text: 'Want to find your stuff a new adventure — for good?',
+  text: 'Want to let your stuff shine again — for good?', #}
+
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
 
 {% endblock %}

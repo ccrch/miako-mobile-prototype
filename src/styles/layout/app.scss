@@ -23,7 +23,7 @@
     height: 21rem;
     font-size: 0;
 
-    ~ svg {
+    ~ .unicorn {
       position: absolute;
       inset: 50% auto auto;
       transform: translate(-257rem, -50%) scaleX(-1) rotate(12deg);
@@ -35,7 +35,8 @@
     }
   }
 
-  > .header + svg {
+  > .header ~ .unicorn {
+    margin: 66vh 0;
     transform: translate(-257rem, 77rem) scaleX(-1) rotate(12deg);
     width: 510rem;
 

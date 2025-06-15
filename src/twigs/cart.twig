@@ -2,7 +2,7 @@
 {% set data = {
   pageId: 'cart',
   pageTheme: 'orange-sun',
-  pageTitle: 'Cart',
+  pageTitle: 'Your Cart',
 } %}
 
 {% extends 'core/template.twig' %}
@@ -10,9 +10,12 @@
 {% block Content %}
 
   {{ Header({
-    headline: 'Cart',
+    headline: 'Your Cart',
+    text: 'You have no items yet',
   }) }}
 
-  {{ source('src/assets/images/unicorn.svg')|raw }}
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
 
 {% endblock %}
