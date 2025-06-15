@@ -5,7 +5,7 @@
   padding: 66rem 25rem 42rem;
   overflow: hidden;
   border-radius: 0 0 45rem 45rem;
-  color: var(--color-white);
+  color: var(--color-white-snow);
 
   svg {
     transform: translate(-257rem, 50rem) scaleX(-1) rotate(12deg);
@@ -19,9 +19,9 @@
   }
 }
 
-@include headerBackground('purple');
-@include headerBackground('yellow');
+@include headerBackground('purple-grape');
+@include headerBackground('yellow-lemon');
 @include headerBackground('orange-sun');
-@include headerBackground('pink');
+@include headerBackground('pink-bubble');
 @include headerBackground('blue-sky');
-@include headerBackground('green');
+@include headerBackground('green-meadow');

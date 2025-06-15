@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  background: var(--color-white);
+  background: var(--color-white-snow);
   color: var(--color-gray-text-dark);
   font-family: var(--font-default);
   font-size: 11rem;
@@ -25,6 +25,6 @@ body {
 
   ::selection {
     background: var(--color-gray-text-dark);
-    color: var(--color-white);
+    color: var(--color-white-snow);
   }
 }

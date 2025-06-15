@@ -6,7 +6,7 @@
   max-width: var(--container-max-width);
   // padding-bottom: 14rem;
   padding-bottom: calc(env(safe-area-inset-bottom) / 2);
-  background: var(--color-white);
+  background: var(--color-white-snow);
   
   &__navigation {
     display: flex;
@@ -81,9 +81,9 @@
   }
 }
 
-@include activeFooterLink('purple', 1);
-@include activeFooterLink('yellow', 2);
+@include activeFooterLink('purple-grape', 1);
+@include activeFooterLink('yellow-lemon', 2);
 @include activeFooterLink('orange-sun', 3);
-@include activeFooterLink('pink', 4);
+@include activeFooterLink('pink-bubble', 4);
 @include activeFooterLink('blue-sky', 5);
-@include activeFooterLink('green', 6);
+@include activeFooterLink('green-meadow', 6);
