@@ -1,4 +1,6 @@
 
+{% from '../core/favicons.twig' import Favicons %}
+{% from '../core/fonts.twig' import Fonts %}
 {% from '../core/macros.twig' import Id, RandomText, RandomTextContent, RandomTextLowercase %}
 
 {% from '../layout/footer.twig' import Footer %}
@@ -22,16 +24,14 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="msapplication-navbutton-color" content="#a363d9">
     <meta name="mask-icon" content="/safari-pinned-tab.svg" color="#a363d9"> #}
-
+    {{ Favicons(data.pageId) }}
+    {{ Fonts() }}
+    <link href="{% if data.pageId != 'index' %}../{% endif %}assets/styles.min.css?v={{ 'now'|date('YmdHi') }}" rel="stylesheet" />
+    <script src="{% if data.pageId != 'index' %}../{% endif %}assets/scripts.min.js?v={{ 'now'|date('YmdHi') }}" type="text/javascript" defer></script>
     <style>
       .preload { opacity: 0; }
     </style>
     <title>{{ data.pageTitle }} − miako</title>
-    <link href="{% if data.pageId != 'index' %}../{% endif %}assets/styles.min.css?v={{ 'now'|date('YmdHi') }}" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="{% if data.pageId != 'index' %}../{% endif %}assets/scripts.min.js?v={{ 'now'|date('YmdHi') }}" type="text/javascript" defer></script>
   </head>
   <body>
     <div class="app">
