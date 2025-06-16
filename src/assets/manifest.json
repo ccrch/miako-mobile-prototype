@@ -1,0 +1,21 @@
+{
+  "name": "miako",
+  "short_name": "miako",
+  "start_url": "/miako-mobile-prototype/home/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a363d9",
+  "description": "Your stuff for good.",
+  "icons": [
+    {
+      "src": "/miako-mobile-prototype/assets/icons/fav/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/miako-mobile-prototype/assets/icons/fav/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

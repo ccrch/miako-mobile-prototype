@@ -12,3 +12,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   import('./core/theme-color-change').then((module) => module.default.init())
 })
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/miako-mobile-prototype/service-worker.js')
+  // navigator.serviceWorker.register('/service-worker.js')
+}
