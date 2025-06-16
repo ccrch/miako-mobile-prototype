@@ -10,5 +10,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log('Hi!')
   document.querySelector('html').classList.remove('preload')
 
-  import('./core/theme-color-change').then((module) => module.default.init())
+  // import('./core/theme-color-change').then((module) => module.default.init())
 })
