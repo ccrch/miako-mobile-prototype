@@ -5,9 +5,11 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 8rem;
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 170rem;
-  padding: 66rem 25rem 25rem;
+  padding: 66rem 30rem 30rem;
   overflow: hidden;
   border-radius: 0 0 45rem 45rem;
   color: var(--color-white-snow);

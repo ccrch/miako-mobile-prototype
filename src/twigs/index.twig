@@ -9,9 +9,10 @@
 
 {% block Content %}
 
-  <a class="app__index" href="home">Home</a>
-  <div class="unicorn">
+  <a class="app__index-button" href="home">Home</a>
+  <div class="app__index-unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}
   </div>
+  <p class="app__index-version">{{ 'now'|date('Y−md−hi') }}</p>
 
 {% endblock %}

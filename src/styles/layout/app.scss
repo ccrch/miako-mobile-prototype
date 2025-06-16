@@ -11,27 +11,38 @@
   min-height: 123vh;
   overflow: hidden;
 
-  &:has(.app__index) {
+  &:has(.app__index-button) {
     min-height: 100vh;
   }
 
   &__index {
-    position: absolute;
-    inset: 21rem 21rem auto auto;
-    z-index: 2;
-    width: 21rem;
-    height: 21rem;
-    font-size: 0;
+    &-button {
+      position: absolute;
+      inset: 21rem 21rem auto auto;
+      z-index: 2;
+      width: 21rem;
+      height: 21rem;
+      font-size: 0;
 
-    ~ .unicorn {
+      ~ .footer {
+        display: none;
+      }
+    }
+
+    &-unicorn {
       position: absolute;
       inset: 50% auto auto;
       transform: translate(-257rem, -50%) scaleX(-1) rotate(12deg);
       width: 510rem;
     }
 
-    ~ .footer {
-      display: none;
+    &-version {
+      position: absolute;
+      inset: auto 21rem 21rem auto;
+      z-index: 2;
+      font-size: 9rem;
+      font-weight: 700;
+      line-height: 11rem;
     }
   }
 
