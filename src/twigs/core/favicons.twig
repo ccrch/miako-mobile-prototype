@@ -3,6 +3,8 @@
 
   {% set path = pageId == 'index' ? 'assets/favicons' : '../assets/favicons' %}
 
+  {# Favicons from https://www.favicon-generator.org/ #}
+
   <link rel="apple-touch-icon" sizes="57x57" href="{{ path }}/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ path }}/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{{ path }}/apple-icon-72x72.png">
@@ -20,5 +22,15 @@
   <meta name="msapplication-TileColor" content="#a363d9">
   <meta name="msapplication-TileImage" content="{{ path }}/ms-icon-144x144.png">
   <meta name="theme-color" content="#a363d9">
+
+  {# Stuff from Chat GPT #}
+
+  <meta name="theme-color" content="#a363d9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#a363d9" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-navbutton-color" content="#a363d9">
+  <meta name="mask-icon" content="/safari-pinned-tab.svg" color="#a363d9">
 
 {% endmacro %}
