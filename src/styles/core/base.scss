@@ -1,7 +1,7 @@
 
 html {
   min-height: 100%;
-  background: var(--color-gray-background);
+  background: var(--color-black-onyx);
   font-size: calc((100 / var(--design-width)) * 1vw);
 
   @media (min-width: 1024px) {
@@ -10,11 +10,11 @@ html {
 }
 
 body {
-  max-width: var(--container-max-width);
+  // max-width: var(--container-max-width);
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  background: var(--color-white-snow);
+  background: var(--color-black-onyx);
   color: var(--color-gray-text-dark);
   font-family: var(--font-default);
   font-size: 11rem;

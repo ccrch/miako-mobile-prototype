@@ -26,9 +26,8 @@
   <body>
     <div class="app">
       {% block Content %}{% endblock %}
-      {{ Footer({
-        pageId: data.pageId,
-      }) }}
+      {{ Footer() }}
+      <label class="app__warning"><input type="checkbox">Please watch in portrait mode.</label>
     </div>
   </body>
 </html>

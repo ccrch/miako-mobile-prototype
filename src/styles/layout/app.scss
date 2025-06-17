@@ -9,10 +9,12 @@
   // max-width: 100vw;
   max-width: var(--container-max-width);
   min-height: 123vh;
+  margin: 0 auto;
   overflow: hidden;
+  background: var(--color-white-snow);
 
   &:has(.app__index-button) {
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   &__index {
@@ -46,13 +48,39 @@
     }
   }
 
+  &__warning {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    z-index: 123;
+    background: var(--color-black-onyx);
+    color: var(--color-white-snow);
+    opacity: 0.99;
+    font-size: 9rem;
+
+    @media (orientation: landscape) and (pointer: coarse) and (hover: none) {
+      display: flex;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    &:has(input:checked) {
+      display: none;
+    }
+  }
+
   > .header ~ .unicorn {
     margin: 66vh 0;
     transform: translate(-257rem, 77rem) scaleX(-1) rotate(12deg);
     width: 510rem;
 
     * {
-      pointer-events: none;;
+      pointer-events: none;
     }
   }
 }
