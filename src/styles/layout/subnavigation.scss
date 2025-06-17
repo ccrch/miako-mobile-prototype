@@ -37,7 +37,7 @@
     font-weight: 700;
     line-height: 16rem;
     text-transform: uppercase;
-    white-space: nowrap;
+    text-wrap: nowrap;
 
     &::before {
       content: '';

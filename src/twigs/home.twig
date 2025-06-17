@@ -19,6 +19,27 @@
     headline: 'Hi there!',
   }) }}
 
+  {{ Title({
+    headline: 'What is <span>miako</span>?',
+    linkText: 'Learn more about us',
+    linkUrl: '../home--about',
+  }) }}
+
+  <section class="cards">
+    <div class="cards__container">
+      <div class="card">
+        <h3 class="card__headline h2">Ever heard of <span>miako</span>?</h3>
+        {{ source('src/assets/images/unicorn.svg')|raw }}
+      </div>
+      <div class="card">
+        <h3 class="card__headline h2">We're a localized community driven marketplace where members</h3>
+      </div>
+      <div class="card">
+        <h3 class="card__headline h2">can buy and sell products and donate a part of the profit to charity.</h3>
+      </div>
+    </div>
+  </section>
+
   {# text: 'Want to give your stuff a happy new home — for good?',
   text: 'Want your stuff to live happily ever after — for good?',
   text: 'Want to find your stuff a new adventure — for good?',

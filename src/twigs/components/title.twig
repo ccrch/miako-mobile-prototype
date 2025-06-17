@@ -2,7 +2,10 @@
 {% macro Title(props) %}
 
   <section class="title {% if props.border == true %}title--border{% endif %}">
-    <h2 class="title__headlie h5">{{ props.headline }}</h2>
+    <h2 class="title__headline h5">{{ props.headline|raw }}</h2>
+    {% if props.linkUrl %}
+      <a class="title__link" href="{{ props.linkUrl }}">{{ props.linkText }}</a>
+    {% endif %}
   </section>
 
 {% endmacro %}
