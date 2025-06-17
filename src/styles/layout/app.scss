@@ -14,17 +14,19 @@
   background: var(--color-white-snow);
 
   &:has(.app__index-button) {
-    min-height: 100dvh;
+    min-height: 100vh;
   }
 
   &__index {
     &-button {
       position: absolute;
-      inset: 21rem 21rem auto auto;
+      inset: calc(env(safe-area-inset-top) + 21rem) 21rem auto auto;
       z-index: 2;
       width: 21rem;
       height: 21rem;
+      border-radius: 50%;
       font-size: 0;
+      background: red;
 
       ~ .footer {
         display: none;
