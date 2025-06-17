@@ -1,0 +1,8 @@
+
+{% macro Title(props) %}
+
+  <section class="title {% if props.border == true %}title--border{% endif %}">
+    <h2 class="title__headlie h5">{{ props.headline }}</h2>
+  </section>
+
+{% endmacro %}
