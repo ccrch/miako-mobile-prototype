@@ -1,0 +1,28 @@
+
+{% set data = {
+  pageId: 'favorites',
+  pageTheme: 'pink-bubble',
+  pageTitle: 'Favorites',
+  subpageId: 2,
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Favorites',
+    text: 'Cool stuff you saved for later',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  <p>Users</p>
+
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
+
+{% endblock %}

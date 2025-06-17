@@ -49,49 +49,59 @@
   }
 }
 
-[data-theme='purple-grape'] .header__unicorn {
-  inset: -2rem -97rem auto auto;
-  transform: rotate(-12deg);
-  width: 180rem;
+[data-page='home'] .header {
+  &__unicorn {
+    inset: -2rem -97rem auto auto;
+    transform: rotate(-12deg);
+    width: 180rem;
+  }
 }
 
-[data-theme='yellow-lemon'] .header__unicorn {
-  inset: -100rem 37rem auto auto;
-  transform: rotate(183deg);
-  width: 230rem;
+[data-page='search'] .header {
+  &__unicorn {
+    inset: -100rem 37rem auto auto;
+    transform: rotate(183deg);
+    width: 230rem;
+  }
 }
 
-[data-theme='orange-sun'] .header__unicorn {
-  inset: 5rem -132rem auto auto;
-  transform: rotate(-7deg);
-  width: 230rem;
+[data-page='cart'] .header {
+  &__unicorn {
+    inset: 5rem -132rem auto auto;
+    transform: rotate(-7deg);
+    width: 230rem;
+  }
 }
 
-[data-theme='pink-bubble'] .header__unicorn {
-  inset: 5rem -122rem auto auto;
-  transform: rotate(-14deg);
-  width: 230rem;
+[data-page='favorites'] .header {
+  &__unicorn {
+    inset: 5rem -122rem auto auto;
+    transform: rotate(-14deg);
+    width: 230rem;
+  }
 }
 
-[data-theme='blue-sky'] .header__unicorn {
-  inset: -72rem -202rem auto auto;
-  transform: scaleX(-1) rotate(11deg);
-  width: 310rem;
+[data-page='messages'] .header {
+  &__unicorn {
+    inset: -72rem -202rem auto auto;
+    transform: scaleX(-1) rotate(11deg);
+    width: 310rem;
+  }
+
+  &__text em {
+    color: var(--color-blue-sky);
+  }
 }
 
-[data-theme='blue-sky'] .header__text em {
-  color: var(--color-blue-sky);
-}
-
-@mixin headerBackground($color) {
-  [data-theme='#{$color}'] .header {
+@mixin headerBackground($page, $color) {
+  [data-page='#{$page}'] .header {
     background: var(--color-#{$color});
   }
 }
 
-@include headerBackground('purple-grape');
-@include headerBackground('yellow-lemon');
-@include headerBackground('orange-sun');
-@include headerBackground('pink-bubble');
-@include headerBackground('blue-sky');
-@include headerBackground('green-meadow');
+@include headerBackground('home', 'purple-grape');
+@include headerBackground('search', 'yellow-lemon');
+@include headerBackground('cart', 'orange-sun');
+@include headerBackground('favorites', 'pink-bubble');
+@include headerBackground('messages', 'blue-sky');
+@include headerBackground('profile', 'green-meadow');

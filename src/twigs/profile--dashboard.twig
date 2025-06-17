@@ -1,0 +1,28 @@
+
+{% set data = {
+  pageId: 'profile',
+  pageTheme: 'green-meadow',
+  pageTitle: 'Profile',
+  subpageId: 1,
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Profile',
+    text: 'Stuff you sold',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  <p>Dashboard</p>
+
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
+
+{% endblock %}

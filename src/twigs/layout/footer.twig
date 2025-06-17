@@ -1,8 +1,8 @@
 
-{% macro Footer(props) %}
+{% macro Footer() %}
 
   <footer class="footer">
-    <nav class="footer__navigation">
+    <nav class="footer__links">
       <a class="footer__link" href="../home">
         {{ source('src/assets/icons/navigation/home.svg')|raw }}
         {{ source('src/assets/icons/navigation/home-color.svg')|raw }}
@@ -18,21 +18,22 @@
         {{ source('src/assets/icons/navigation/cart-color.svg')|raw }}
         Cart
       </a>
-      <a class="footer__link" href="../favorites">
+      <a class="footer__link" href="../favorites--items">
         {{ source('src/assets/icons/navigation/heart.svg')|raw }}
         {{ source('src/assets/icons/navigation/heart-color.svg')|raw }}
         Favorites
       </a>
-      <a class="footer__link" href="../messages">
+      <a class="footer__link" href="../messages--all">
         {{ source('src/assets/icons/navigation/message.svg')|raw }}
         {{ source('src/assets/icons/navigation/message-color.svg')|raw }}
         Messages
       </a>
-      <a class="footer__link" href="../profile">
+      <a class="footer__link" href="../profile--dashboard">
         {{ source('src/assets/icons/navigation/profile.svg')|raw }}
         {{ source('src/assets/icons/navigation/profile-color.svg')|raw }}
         Profile
       </a>
+      <hr class="footer__line">
     </nav>
   </footer>
 

@@ -3,6 +3,7 @@ html {
   min-height: 100%;
   background: var(--color-black-onyx);
   font-size: calc((100 / var(--design-width)) * 1vw);
+  -webkit-tap-highlight-color: var(--color-black-charcoal--7);
 
   @media (min-width: 1024px) {
     font-size: calc(((100 / var(--design-width)) * var(--design-max-width) / 16) * 0.01rem);
@@ -11,11 +12,10 @@ html {
 
 body {
   // max-width: var(--container-max-width);
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden auto;
   scroll-behavior: smooth;
   background: var(--color-black-onyx);
-  color: var(--color-gray-text-dark);
+  color: var(--color-black-charcoal);
   font-family: var(--font-default);
   font-size: 11rem;
   font-weight: 500;
@@ -24,7 +24,20 @@ body {
   text-size-adjust: none;
 
   ::selection {
-    background: var(--color-gray-text-dark);
+    background: var(--color-black-charcoal);
     color: var(--color-white-snow);
   }
 }
+
+// @mixin tapHighlight($page, $color) {
+//   [data-page='#{$page}'] .footer {
+//     -webkit-tap-highlight-color: var(--color-#{$color}--21);
+//   }
+// }
+
+// @include tapHighlight('home', 'purple-grape');
+// @include tapHighlight('search', 'yellow-lemon');
+// @include tapHighlight('cart', 'orange-sun');
+// @include tapHighlight('favorites', 'pink-bubble');
+// @include tapHighlight('messages', 'blue-sky');
+// @include tapHighlight('profile', 'green-meadow');

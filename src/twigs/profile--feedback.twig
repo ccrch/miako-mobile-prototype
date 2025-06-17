@@ -3,6 +3,7 @@
   pageId: 'profile',
   pageTheme: 'green-meadow',
   pageTitle: 'Profile',
+  subpageId: 7,
 } %}
 
 {% extends 'core/template.twig' %}
@@ -13,6 +14,12 @@
     headline: 'Profile',
     text: 'Stuff you sold',
   }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  <p>Give feedback</p>
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

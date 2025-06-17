@@ -3,6 +3,7 @@
   pageId: 'favorites',
   pageTheme: 'pink-bubble',
   pageTitle: 'Favorites',
+  subpageId: 4,
 } %}
 
 {% extends 'core/template.twig' %}
@@ -13,6 +14,12 @@
     headline: 'Favorites',
     text: 'Cool stuff you saved for later',
   }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  <p>Categories</p>
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

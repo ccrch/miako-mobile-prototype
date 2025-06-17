@@ -1,0 +1,29 @@
+
+{% macro Subnavigation(props) %}
+
+  <div class="subnavigation">
+    <nav class="subnavigation__links">
+      {% if props.pageId == 'favorites' %}
+        <a class="subnavigation__link" href="../favorites--items">Items</a>
+        <a class="subnavigation__link" href="../favorites--users">Users</a>
+        <a class="subnavigation__link" href="../favorites--charities">Charities</a>
+        <a class="subnavigation__link" href="../favorites--categories">Categories</a>
+      {% endif %}
+      {% if props.pageId == 'messages' %}
+        <a class="subnavigation__link" href="../messages--all">All messages</a>
+        <a class="subnavigation__link" href="../messages--notifications">Notifications</a>
+        <a class="subnavigation__link" href="../messages--archive">Archive</a>
+      {% endif %}
+      {% if props.pageId == 'profile' %}
+        <a class="subnavigation__link" href="../profile--dashboard">Dashboard</a>
+        <a class="subnavigation__link" href="../profile--sales">Your sales</a>
+        <a class="subnavigation__link" href="../profile--purchases">Your purchases</a>
+        <a class="subnavigation__link" href="../profile--details">Your details</a>
+        <a class="subnavigation__link" href="../profile--favorites">Your favorites</a>
+        <a class="subnavigation__link" href="../profile--settings">Settings</a>
+        <a class="subnavigation__link" href="../profile--feedback">Give feedback</a>
+      {% endif %}
+    </nav>
+  </div>
+
+{% endmacro %}

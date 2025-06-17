@@ -1,0 +1,28 @@
+
+{% set data = {
+  pageId: 'messages',
+  pageTheme: 'blue-sky',
+  pageTitle: 'Messages',
+  subpageId: 2,
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Messages',
+    text: 'You\'ve got <em>3</em> new messages',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  <p>Notifications</p>
+
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
+
+{% endblock %}
