@@ -6,7 +6,7 @@
   max-width: var(--container-max-width);
   margin: 0 auto;
   // padding-bottom: 14rem;
-  padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+  padding-bottom: calc(env(safe-area-inset-bottom) * 0.5);
   background: var(--color-white-snow);
   touch-action: manipulation;
   
