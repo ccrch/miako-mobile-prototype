@@ -5,7 +5,8 @@
   z-index: 2;
   width: 100%;
   height: 56rem;
-  margin: 0 0 -6rem;
+  // margin: 0 0 -6rem;
+  padding-top: env(safe-area-inset-top);
   background: var(--color-white-snow);
 
   &::before {
@@ -23,9 +24,12 @@
     align-items: center;
     justify-content: flex-start;
     gap: 25rem;
-    height: 62rem;
-    padding: 0 25rem 6rem;
+    // height: 62rem;
+    height: 56rem;
+    // padding: 0 25rem 6rem;
+    padding: 0 25rem;
     overflow: auto hidden;
+    scrollbar-width: none;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
