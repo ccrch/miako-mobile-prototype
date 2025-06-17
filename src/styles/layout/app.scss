@@ -10,7 +10,7 @@
   max-width: var(--container-max-width);
   min-height: 123vh;
   margin: 0 auto;
-  overflow: hidden;
+  // overflow: hidden;
   background: var(--color-white-snow);
 
   &:has(.app__index-button) {

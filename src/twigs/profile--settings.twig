@@ -12,14 +12,16 @@
 
   {{ Header({
     headline: 'Profile',
-    text: 'Stuff you sold',
+    text: 'Settings',
   }) }}
 
   {{ Subnavigation({
     pageId: data.pageId,
   }) }}
 
-  <p>Settings</p>
+  {{ Headline({
+    headline: 'Your profile settings',
+  }) }}
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

@@ -19,7 +19,9 @@
     pageId: data.pageId,
   }) }}
 
-  <p>Notifications</p>
+  {{ Headline({
+    headline: 'Notifications',
+  }) }}
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

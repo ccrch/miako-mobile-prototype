@@ -19,7 +19,9 @@
     pageId: data.pageId,
   }) }}
 
-  <p>Charities</p>
+  {{ Headline({
+    headline: 'List of your favorite charities',
+  }) }}
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

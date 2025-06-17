@@ -12,14 +12,16 @@
 
   {{ Header({
     headline: 'Profile',
-    text: 'Stuff you sold',
+    text: 'Feedback',
   }) }}
 
   {{ Subnavigation({
     pageId: data.pageId,
   }) }}
 
-  <p>Give feedback</p>
+  {{ Headline({
+    headline: 'Give us your feedback',
+  }) }}
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

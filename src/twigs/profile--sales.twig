@@ -19,7 +19,9 @@
     pageId: data.pageId,
   }) }}
 
-  <p>Your sales</p>
+  {{ Headline({
+    headline: 'History of your sales',
+  }) }}
 
   <div class="unicorn">
     {{ source('src/assets/images/unicorn.svg')|raw }}

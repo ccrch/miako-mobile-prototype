@@ -1,9 +1,12 @@
 
 .subnavigation {
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   width: 100%;
   height: 56rem;
+  margin: 0 0 -6rem;
+  background: var(--color-white-snow);
 
   &::before {
     content: '';
@@ -12,7 +15,6 @@
     z-index: 1;
     width: 100%;
     border-bottom: 1rem solid var(--color-black-charcoal--30);
-    
   }
   
   &__links {
@@ -22,7 +24,6 @@
     justify-content: flex-start;
     gap: 25rem;
     height: 62rem;
-    margin: 0 0 -6rem;
     padding: 0 25rem 6rem;
     overflow: auto hidden;
     scroll-behavior: smooth;
