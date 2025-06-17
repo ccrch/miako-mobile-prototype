@@ -65,16 +65,36 @@
   }
 }
 
-@mixin footerLinkActive($page, $color, $index) {
+// @each $page, $color in (
+//   'home' 'purple-grape',
+//   'search' 'yellow-lemon',
+//   'cart' 'orange-sun',
+//   'favorites' 'pink-bubble',
+//   'messages' 'blue-sky',
+//   'profile' 'green-meadow'
+// ) {
+//   [data-page='#{$page}'] .footer {
+//     -webkit-tap-highlight-color: var(--color-#{$color}--21);
+//   }
+// }
+
+@each $page, $color, $index in (
+  'home' 'purple-grape' 1,
+  'search' 'yellow-lemon' 2,
+  'cart' 'orange-sun' 3,
+  'favorites' 'pink-bubble' 4,
+  'messages' 'blue-sky' 5,
+  'profile' 'green-meadow' 6,
+) {
   [data-page='#{$page}'] .footer {
     &__link:nth-child(#{$index}) {
       color: var(--color-#{$color});
-  
+
       svg {
         &:first-of-type {
           display: none;
         }
-  
+
         &:last-of-type {
           display: block;
         }
@@ -87,10 +107,3 @@
     }
   }
 }
-
-@include footerLinkActive('home', 'purple-grape', 1);
-@include footerLinkActive('search', 'yellow-lemon', 2);
-@include footerLinkActive('cart', 'orange-sun', 3);
-@include footerLinkActive('favorites', 'pink-bubble', 4);
-@include footerLinkActive('messages', 'blue-sky', 5);
-@include footerLinkActive('profile', 'green-meadow', 6);

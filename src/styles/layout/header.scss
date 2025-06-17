@@ -93,15 +93,15 @@
   }
 }
 
-@mixin headerBackground($page, $color) {
+@each $page, $color in (
+  'home' 'purple-grape',
+  'search' 'yellow-lemon',
+  'cart' 'orange-sun',
+  'favorites' 'pink-bubble',
+  'messages' 'blue-sky',
+  'profile' 'green-meadow'
+) {
   [data-page='#{$page}'] .header {
     background: var(--color-#{$color});
   }
 }
-
-@include headerBackground('home', 'purple-grape');
-@include headerBackground('search', 'yellow-lemon');
-@include headerBackground('cart', 'orange-sun');
-@include headerBackground('favorites', 'pink-bubble');
-@include headerBackground('messages', 'blue-sky');
-@include headerBackground('profile', 'green-meadow');

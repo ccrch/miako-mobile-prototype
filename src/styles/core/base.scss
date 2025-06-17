@@ -28,16 +28,3 @@ body {
     color: var(--color-white-snow);
   }
 }
-
-// @mixin tapHighlight($page, $color) {
-//   [data-page='#{$page}'] .footer {
-//     -webkit-tap-highlight-color: var(--color-#{$color}--21);
-//   }
-// }
-
-// @include tapHighlight('home', 'purple-grape');
-// @include tapHighlight('search', 'yellow-lemon');
-// @include tapHighlight('cart', 'orange-sun');
-// @include tapHighlight('favorites', 'pink-bubble');
-// @include tapHighlight('messages', 'blue-sky');
-// @include tapHighlight('profile', 'green-meadow');

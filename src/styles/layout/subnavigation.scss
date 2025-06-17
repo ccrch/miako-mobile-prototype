@@ -66,15 +66,15 @@
   }
 }
 
-@mixin subnavigationLineColor($page, $color) {
+@each $page, $color in (
+  'home' 'purple-grape',
+  'search' 'yellow-lemon',
+  'cart' 'orange-sun',
+  'favorites' 'pink-bubble',
+  'messages' 'blue-sky',
+  'profile' 'green-meadow'
+) {
   [data-page='#{$page}'] .subnavigation__link::before {
     background: var(--color-#{$color});
   }
 }
-
-@include subnavigationLineColor('home', 'purple-grape');
-@include subnavigationLineColor('search', 'yellow-lemon');
-@include subnavigationLineColor('cart', 'orange-sun');
-@include subnavigationLineColor('favorites', 'pink-bubble');
-@include subnavigationLineColor('messages', 'blue-sky');
-@include subnavigationLineColor('profile', 'green-meadow');
