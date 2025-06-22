@@ -5,11 +5,51 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  min-height: 170rem;
-  padding: 77rem 25rem 30rem;
+  min-height: 190rem;
+  padding: 97rem 25rem 30rem;
   overflow: hidden;
   border-radius: 0 0 45rem 45rem;
   color: var(--color-white-snow);
+
+  &__links {
+    @include flex-row;
+    position: absolute;
+    inset: calc(env(safe-area-inset-bottom) * 0.5 + 10rem) 0 auto auto;
+    z-index: 2;
+    width: 50%;
+    height: 66rem;
+  }
+
+  &__link {
+    flex: 0 0 calc(100% / 3);
+    @include flex-column;
+    gap: 6rem;
+    position: relative;
+    z-index: 1;
+    width: calc(100% / 3);
+    height: 100%;
+    padding: 12rem 0 ;
+    color: var(--color-white-snow);
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 11rem;
+
+    svg {
+      width: 24rem;
+      height: 24rem;
+
+      &:first-of-type {
+        circle,
+        path {
+          stroke: var(--color-white-snow);
+        }
+      }
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
 
   &__text {
     font-size: 15rem;
@@ -48,7 +88,7 @@
 
 [data-page='home'] .header {
   &__unicorn {
-    inset: -2rem -97rem auto auto;
+    inset: 32rem -97rem auto auto;
     transform: rotate(-12deg);
     width: 180rem;
   }
@@ -56,7 +96,7 @@
 
 [data-page='search'] .header {
   &__unicorn {
-    inset: -100rem 37rem auto auto;
+    inset: -100rem 237rem auto auto;
     transform: rotate(183deg);
     width: 230rem;
   }
@@ -64,15 +104,42 @@
 
 [data-page='cart'] .header {
   &__unicorn {
-    inset: 5rem -132rem auto auto;
+    inset: 75rem -112rem auto auto;
     transform: rotate(-7deg);
     width: 230rem;
+  }
+
+  &__link[href*='cart'] {
+    svg {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        display: block;
+
+        path {
+          &:nth-child(1) {
+            fill: var(--color-white-snow);
+          }
+
+          &:nth-child(2) {
+            stroke: var(--color-white-snow);
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            stroke: var(--color-orange-sun);
+          }
+        }
+      }
+    }
   }
 }
 
 [data-page='favorites'] .header {
   &__unicorn {
-    inset: 5rem -122rem auto auto;
+    inset: 65rem -112rem auto auto;
     transform: rotate(-14deg);
     width: 230rem;
   }
@@ -80,13 +147,52 @@
 
 [data-page='messages'] .header {
   &__unicorn {
-    inset: -72rem -202rem auto auto;
+    inset: -12rem -192rem auto auto;
     transform: scaleX(-1) rotate(11deg);
     width: 310rem;
   }
 
   &__text em {
     color: var(--color-blue-sky);
+  }
+
+  &__link[href*='messages'] {
+    svg {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        display: block;
+
+        path {
+          fill: var(--color-white-snow);
+          stroke: var(--color-white-snow);
+        }
+      }
+    }
+  }
+}
+
+[data-page='profile'] .header {
+  &__link[href*='profile'] {
+    svg {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        display: block;
+
+        rect {
+          fill: var(--color-white-snow);
+        }
+
+        path {
+          stroke: var(--color-green-meadow);
+        }
+      }
+    }
   }
 }
 

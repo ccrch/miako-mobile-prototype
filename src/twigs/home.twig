@@ -32,7 +32,7 @@
         {{ source('src/assets/images/unicorn.svg')|raw }}
       </div>
       <div class="card">
-        <h3 class="card__headline h2">We're a localized community driven marketplace where members</h3>
+        <h3 class="card__headline h2">It's a localized community driven marketplace where members</h3>
       </div>
       <div class="card">
         <h3 class="card__headline h2">can buy and sell products and donate a part of the profit to charity.</h3>
@@ -52,10 +52,33 @@
   {#
     rank - start with score
     swipe left/right to like/dislike - like in tinder but for products
+    categories & products - like on pinterest - more items in category = bigger tile
     send feedback
     report abuse
     raffles 
     raffle icon - https://www.google.com/search?q=raffle+icon&sca_esv=20f39db26fe1047c&sxsrf=AE3TifMT7hnucJfcRcWx6gEXURKBUBydkw%3A1749956098030&ei=AjZOaP_NAen97_UPtY-FwAI&ved=0ahUKEwj_1uG8tvKNAxXp_rsIHbVHASgQ4dUDCBA&uact=5&oq=raffle+icon&gs_lp=Egxnd3Mtd2l6LXNlcnAiC3JhZmZsZSBpY29uMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSKoWUKwPWLoUcAF4AZABAJgBlgGgAa0EqgEDMi4zuAEDyAEA-AEBmAIGoALMBMICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIPEAAYgAQYsAMYQxiKBRgKwgIOEAAYsAMY5AIY1gTYAQHCAhYQLhiABBiwAxhDGNQCGMgDGIoF2AEBwgITEC4YgAQYsAMYQxjIAxiKBdgBAcICChAAGIAEGEMYigXCAgsQABiABBiRAhiKBcICBxAAGIAEGAqYAwCIBgGQBhG6BgYIARABGAmSBwMyLjSgB64dsgcDMS40uAfEBMIHAzItNsgHGg&sclient=gws-wiz-serp
   #}
+  
+  {# move cart & messages to top #}
+
+  {#
+    sticky subnav on every page
+    home - hi / sell / buy / about
+    search - all / categories
+  #}
+  
+  {# slider for how much % to donate - more the % the happier the unicorn #}
+
+  {# &__items {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  &__item {
+    scroll-snap-align: center;
+  } #}
+
+
 
 {% endblock %}
