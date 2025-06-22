@@ -1,6 +1,6 @@
 const themeColorChange = {
   el: {
-    themeMeta: document.querySelectorAll<HTMLMetaElement>("meta[name='theme-color']"),
+    themeMeta: document.querySelectorAll<HTMLMetaElement>(`meta[name='theme-color']`),
   },
 
   init(): void {

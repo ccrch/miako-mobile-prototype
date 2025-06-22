@@ -11,4 +11,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.querySelector('html').classList.remove('preload')
 
   import('./core/theme-color-change').then((module) => module.default.init())
+  import('./layout/header').then((module) => module.default.init())
 })
