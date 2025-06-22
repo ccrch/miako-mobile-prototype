@@ -39,7 +39,7 @@
     line-height: 16rem;
     text-transform: uppercase;
     text-wrap: nowrap;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 
     &::before {
       content: '';
