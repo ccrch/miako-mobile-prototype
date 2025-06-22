@@ -11,9 +11,7 @@
   touch-action: manipulation;
   
   &__links {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    @include flex-row;
     justify-content: space-evenly;
     // height: 80rem;
     height: 66rem;
@@ -23,9 +21,7 @@
   &__link {
     // flex: 0 0 16.6667%;
     flex: 1 1 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    @include flex-column;
     gap: 6rem;
     position: relative;
     z-index: 1;
