@@ -7,11 +7,11 @@
   max-width: var(--container-max-width);
   min-height: 123vh;
   margin: 0 auto;
-  // overflow: hidden;
   background: var(--color-white-snow);
-
+  
   &:has(.app__index-button) {
     min-height: 100vh;
+    overflow: hidden;
   }
 
   &__index {
@@ -30,7 +30,7 @@
 
     &-unicorn {
       position: absolute;
-      inset: auto auto calc(env(safe-area-inset-bottom) - 90rem) -200rem;
+      inset: auto auto -90rem -200rem;
       transform: scaleX(-1) rotate(28deg);
       width: 510rem;
     }
