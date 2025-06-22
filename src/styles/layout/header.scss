@@ -5,8 +5,8 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  min-height: calc(env(safe-area-inset-top) + 210rem);
-  padding: calc(env(safe-area-inset-top) + 107rem) 25rem 30rem;
+  min-height: calc(env(safe-area-inset-top) * 0.8 + 210rem);
+  padding: calc(env(safe-area-inset-top) * 0.8 + 107rem) 25rem 30rem;
   overflow: hidden;
   border-radius: 0 0 45rem 45rem;
   color: var(--color-white-snow);
@@ -15,7 +15,7 @@
     position: fixed;
     inset: 0 0 auto;
     z-index: 2;
-    padding-top: env(safe-area-inset-top);
+    padding-top: calc(env(safe-area-inset-top) * 0.8);
   }
 
   &__links {
@@ -100,7 +100,7 @@
 
 [data-page='home'] .header {
   &__unicorn {
-    inset: calc(env(safe-area-inset-top) + 2rem) auto auto -115rem;
+    inset: calc(env(safe-area-inset-top) * 0.8 + 2rem) auto auto -115rem;
     transform: rotate(12deg) scaleX(-1);
     width: 210rem;
   }
@@ -108,15 +108,15 @@
 
 [data-page='search'] .header {
   &__unicorn {
-    inset: calc(env(safe-area-inset-top) - 100rem) 237rem auto auto;
-    transform: rotate(183deg);
-    width: 230rem;
+    inset: auto 87rem -139rem auto;
+    transform: rotate(-3deg) scaleX(-1);
+    width: 270rem;
   }
 }
 
 [data-page='cart'] .header {
   &__unicorn {
-    inset: calc(env(safe-area-inset-top) + 75rem) -112rem auto auto;
+    inset: calc(env(safe-area-inset-top) * 0.8 + 75rem) -112rem auto auto;
     transform: rotate(-7deg);
     width: 230rem;
   }
@@ -151,7 +151,7 @@
 
 [data-page='favorites'] .header {
   &__unicorn {
-    inset: calc(env(safe-area-inset-top) + 65rem) -112rem auto auto;
+    inset: calc(env(safe-area-inset-top) * 0.8 + 65rem) -112rem auto auto;
     transform: rotate(-14deg);
     width: 230rem;
   }
@@ -159,7 +159,7 @@
 
 [data-page='messages'] .header {
   &__unicorn {
-    inset: calc(env(safe-area-inset-top) - 12rem) -192rem auto auto;
+    inset: calc(env(safe-area-inset-top) * 0.8 - 12rem) -192rem auto auto;
     transform: scaleX(-1) rotate(11deg);
     width: 310rem;
   }
