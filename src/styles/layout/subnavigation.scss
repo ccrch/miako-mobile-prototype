@@ -27,6 +27,7 @@
     padding: 0 25rem 2rem;
     overflow: auto hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -38,6 +39,7 @@
     line-height: 16rem;
     text-transform: uppercase;
     text-wrap: nowrap;
+    scroll-snap-align: center;
 
     &::before {
       content: '';

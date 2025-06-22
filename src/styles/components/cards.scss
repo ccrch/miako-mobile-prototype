@@ -14,6 +14,7 @@
     padding: 0 20rem;
     overflow: auto hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 }
@@ -28,6 +29,7 @@
   overflow: hidden;
   border-radius: 30rem;
   color: var(--color-white-snow);
+  scroll-snap-align: center;
 
   &__headline {
     text-wrap: pretty;
