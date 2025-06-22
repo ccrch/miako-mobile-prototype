@@ -19,9 +19,8 @@
       position: absolute;
       inset: calc(env(safe-area-inset-top) + 21rem) 21rem auto auto;
       z-index: 2;
-      width: 21rem;
-      height: 21rem;
-      border-radius: 50%;
+      width: 33rem;
+      height: 33rem;
       font-size: 0;
 
       ~ .footer {
@@ -31,8 +30,8 @@
 
     &-unicorn {
       position: absolute;
-      inset: 50% auto auto;
-      transform: translate(-257rem, -50%) scaleX(-1) rotate(12deg);
+      inset: auto auto calc(env(safe-area-inset-bottom) - 90rem) -200rem;
+      transform: scaleX(-1) rotate(28deg);
       width: 510rem;
     }
 
