@@ -8,21 +8,24 @@
   min-height: calc(env(safe-area-inset-top) * 0.8 + 210rem);
   padding: calc(env(safe-area-inset-top) * 0.8 + 107rem) 25rem 30rem;
   overflow: hidden;
-  border-radius: 0 0 45rem 45rem;
   color: var(--color-white-snow);
+  border-radius: 0 0 45rem 45rem;
 
   &__navigation {
     position: fixed;
     inset: 0 0 auto;
     z-index: 2;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
     padding-top: calc(env(safe-area-inset-top) * 0.8);
   }
 
   &__links {
     @include flex-row;
     margin-left: auto;
-    width: 50%;
+    width: 40%;
     height: 66rem;
+    margin-right: 5rem;
   }
 
   &__link {
