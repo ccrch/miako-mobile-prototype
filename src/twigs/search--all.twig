@@ -3,6 +3,7 @@
   pageId: 'search',
   pageTheme: 'yellow-lemon',
   pageTitle: 'Search & buy!',
+  subpageId: 1,
 } %}
 
 {% extends 'core/template.twig' %}
@@ -13,6 +14,10 @@
     headline: 'Search & buy!',
     search: true,
     searchPlaceholder: 'Find something cool & get it',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
   }) }}
 
   {{ Title({

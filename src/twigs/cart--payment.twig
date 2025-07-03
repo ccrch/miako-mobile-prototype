@@ -3,6 +3,7 @@
   pageId: 'cart',
   pageTheme: 'orange-sun',
   pageTitle: 'Your Cart',
+  subpageId: 4,
 } %}
 
 {% extends 'core/template.twig' %}
@@ -14,9 +15,13 @@
     text: 'You have no items yet',
   }) }}
 
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
   {{ Title({
     border: true,
-    headline: 'Your cart',
+    headline: 'Payment',
   }) }}
 
   <div class="unicorn">

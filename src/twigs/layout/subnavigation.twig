@@ -1,8 +1,26 @@
 
 {% macro Subnavigation(props) %}
 
-  <div class="subnavigation">
+  <section class="subnavigation">
     <nav class="subnavigation__links">
+      {% if props.pageId == 'home' %}
+        <a class="subnavigation__link" href="../home--hi">Hi!</a>
+        <a class="subnavigation__link" href="../home--buy">Buy</a>
+        <a class="subnavigation__link" href="../home--sell">Sell</a>
+        <a class="subnavigation__link" href="../home--faq">FAQ</a>
+        <a class="subnavigation__link" href="../home--about-us">About us</a>
+      {% endif %}
+      {% if props.pageId == 'search' %}
+        <a class="subnavigation__link" href="../search--all">All categories</a>
+        <a class="subnavigation__link" href="../search--featured">Featured</a>
+        <a class="subnavigation__link" href="../search--popular">Popular</a>
+      {% endif %}
+      {% if props.pageId == 'cart' %}
+        <a class="subnavigation__link" href="../cart--order">Your order</a>
+        <a class="subnavigation__link" href="../cart--review">Review items</a>
+        <a class="subnavigation__link" href="../cart--shipping">Shipping</a>
+        <a class="subnavigation__link" href="../cart--payment">Payment</a>
+      {% endif %}
       {% if props.pageId == 'favorites' %}
         <a class="subnavigation__link" href="../favorites--items">Items</a>
         <a class="subnavigation__link" href="../favorites--users">Users</a>
@@ -24,6 +42,6 @@
         <a class="subnavigation__link" href="../profile--feedback">Give feedback</a>
       {% endif %}
     </nav>
-  </div>
+  </section>
 
 {% endmacro %}

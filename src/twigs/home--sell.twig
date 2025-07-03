@@ -1,0 +1,22 @@
+
+{% set data = {
+  pageId: 'home',
+  pageTheme: 'purple-grape',
+  pageTitle: 'Hi!',
+  subpageId: 3,
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Welcome, David!',
+    text: 'Want to set your stuff free — for good?',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+
+{% set data = {
+  pageId: 'cart',
+  pageTheme: 'orange-sun',
+  pageTitle: 'Your Cart',
+  subpageId: 1,
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Your Cart',
+    text: 'You have no items yet',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  {{ Title({
+    border: true,
+    headline: 'Your order',
+  }) }}
+
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
+
+{% endblock %}

@@ -18,7 +18,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     {{ Favicons(data.pageId) }}
-    {{ Fonts() }}
+    {{ Fonts() }}  
     <link href="{% if data.pageId != 'index' %}../{% endif %}assets/styles.min.css?v={{ 'now'|date('YmdHi') }}" rel="stylesheet" />
     <script src="{% if data.pageId != 'index' %}../{% endif %}assets/scripts.min.js?v={{ 'now'|date('YmdHi') }}" type="text/javascript" defer></script>
     <style>

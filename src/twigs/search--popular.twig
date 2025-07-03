@@ -1,0 +1,32 @@
+
+{% set data = {
+  pageId: 'search',
+  pageTheme: 'yellow-lemon',
+  pageTitle: 'Search & buy!',
+  subpageId: 3,
+} %}
+
+{% extends 'core/template.twig' %}
+
+{% block Content %}
+
+  {{ Header({
+    headline: 'Search & buy!',
+    search: true,
+    searchPlaceholder: 'Find something cool & get it',
+  }) }}
+
+  {{ Subnavigation({
+    pageId: data.pageId,
+  }) }}
+
+  {{ Title({
+    border: true,
+    headline: 'Popular stuff',
+  }) }}
+
+  <div class="unicorn">
+    {{ source('src/assets/images/unicorn.svg')|raw }}
+  </div>
+
+{% endblock %}
