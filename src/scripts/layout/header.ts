@@ -19,13 +19,13 @@ const header = {
       trigger: this.el.header,
     })
 
-    ScrollTrigger.create({
-      animation: gsap.to(this.el.header, { ease: 'none', borderRadius: 0 }),
-      end: '+=80rem',
-      scrub: true,
-      start: '0% -40rem',
-      trigger: this.el.header,
-    })
+    // ScrollTrigger.create({
+    //   animation: gsap.to(this.el.header, { ease: 'none', borderRadius: 0 }),
+    //   end: '+=80rem',
+    //   scrub: true,
+    //   start: '0% -40rem',
+    //   trigger: this.el.header,
+    // })
 
     this.unicornAnimation()
   },
